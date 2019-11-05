@@ -1,4 +1,4 @@
-Exercícios
+Exercícios e Respostas
 
 1.	Selecione todos os registros.
 R: db.alunas.find()
@@ -19,11 +19,11 @@ R: db.alunas.find({ "livros.titulo" : "Clean Code"}).pretty()
 R: db.alunas.find({ "nome": "Helena", "livros.titulo": "Clean Code"  }).pretty()
 
 7.	Selecione todos os registros em que a aluna não tenha nascido em sp e tenha o livro Cangaceiro JavaScript.
-R: 
+R: db.alunas.find({ "nasceuEmSp": "false", "livros.titulo": "Cangaceiro JavaScript"  }).pretty()
 
 8.	Selecione todos os registros em que a aluna contenha  o livro Java – Web Developers ou Clean Code B. Primeiro: realize o exercício com o operador ou e posteriormente realize o exercício com o operador in.
-R:
-
+R(ou): db.alunas.find({ $or: [{"livros.titulo": "You dont know JS"}, {"livros.titulo": "Clean Code"}]}).pretty()
+R(in): 
 9.	Pegue o exercício acima e inclua também aonde a aluna pode ter nascido em sp.
 R:
 
