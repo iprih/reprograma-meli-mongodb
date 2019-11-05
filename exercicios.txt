@@ -1,0 +1,31 @@
+Exercícios
+
+1.	Selecione todos os registros.
+R: db.alunas.find()
+
+2.	Selecione todos os registros e deixe a com apresentação melhor visível.
+R: db.alunas.find().pretty() 
+
+3.	Selecione todos os registros em que o nome seja igual a ‘Priscila’.
+R: db.alunas.find({ “nome” : “Priscila” }).pretty() 
+
+4.	Selecione todos os registros em que a aluna nasceu em São Paulo.
+R: db.alunas.find({"nasceuEmSp": "true"}).pretty()
+
+5.	Selecione todos os registros em que contenha a título do livro igual a “Java - Web Developers”.
+R: db.alunas.find({ "livros.titulo" : "Clean Code"}).pretty()
+
+6.	Selecione todos os registros em que a aluna tenha o livro “Clean Code A” e o nome “Helena”. 
+R: db.alunas.find({ "nome": "Helena", "livros.titulo": "Clean Code"  }).pretty()
+
+7.	Selecione todos os registros em que a aluna não tenha nascido em sp e tenha o livro Cangaceiro JavaScript.
+R: 
+
+8.	Selecione todos os registros em que a aluna contenha  o livro Java – Web Developers ou Clean Code B. Primeiro: realize o exercício com o operador ou e posteriormente realize o exercício com o operador in.
+R:
+
+9.	Pegue o exercício acima e inclua também aonde a aluna pode ter nascido em sp.
+R:
+
+Utilizando os dois operadores juntos. $or e $in.
+10.	Procure todas as alunas que tenham nascido em são paulo ou os livros ‘MySQL’ e ‘MongoDB’.
