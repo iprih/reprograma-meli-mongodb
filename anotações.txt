@@ -1,0 +1,13 @@
+regex - espressao regular
+
+Exemplo abaixo irá buscar todas as alunas com a letra h
+
+db.alunas.find({"nome":/h/}).pretty()
+
+Colocando o i ele irá ignorar o case sensitive
+
+db.alunas.find({"nome":/h/i}).pretty()
+
+se colocar com ^ ele irá iniciar a palavra 
+
+db.alunas.find({"nome":/^h/i}).pretty()
