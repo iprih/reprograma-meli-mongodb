@@ -1,16 +1,16 @@
 Regex - espressao regular
 
-Exemplo abaixo ir· buscar todas as alunas com a letra h
+Exemplo abaixo ir√° buscar todas as alunas com a letra h 
 
 db.alunas.find({"nome":/h/}).pretty()
 
-Colocando o i ele ir· ignorar o case sensitive
+Colocando o i ele ir√° ignorar o case sensitive
 
 db.alunas.find({"nome":/h/i}).pretty()
 
-Se colocar com ^ ele ir· iniciar a palavra 
+Se colocar com ^ ele ir√° iniciar a palavra 
 
 db.alunas.find({"nome":/^h/i}).pretty()
 
-Colocar o cifr„o no fim da palavra, traz a palavra referente, ou seja, se voce pesquisar "na$" de ir· vir o fim de "Helena":
+Colocar o cifr√£o no fim da palavra, traz a palavra referente, ou seja, se voce pesquisar "na$" de ir√° vir o fim de "Helena":
 db.alunas.find({"nome":/na$/i}).pretty()
